@@ -40,12 +40,18 @@ DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 1 AND `SourceGroup` =
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
 (1, 54003, 21108, 0, 0, 9, 0, 8620, 0, 0, 0, 0, 0, '', 'Draconic for Dummies Chapter VI will drop only when a player have The Only Prescription (8620) in their quest log');
 
-DELETE FROM `disables` WHERE `entry` IN (12565, 12566, 12564, 12558) AND `sourceType` = 4;
+DELETE FROM `disables` WHERE `entry` IN (12558, 12564, 12565, 12566, 12559, 12567, 12568, 12569, 13276, 13345) AND `sourceType` = 4;
 INSERT INTO `disables` (`sourceType`, `entry`, `flags`, `params_0`, `params_1`, `comment`) VALUES
-(4, 12565, 0, 0, 0, 'Disable Many Whelps, Handle it! (10) achievement'),
-(4, 12566, 0, 0, 0, 'Disable She deeps breah more (10) achievement'),
-(4, 12564, 0, 0, 0, 'Disable More dots! (10) achievement'),
-(4, 12558, 0, 0, 0, 'Disable Onyxia Lair (10) achievement');
+(4, 12558, 0, 0, 0, 'Disable Onyxia Lair (10) Achievement'),
+(4, 12564, 0, 0, 0, 'Disable More Dots! (10) Achievement'),
+(4, 12565, 0, 0, 0, 'Disable Many Whelps, Handle it! (10) Achievement'),
+(4, 12566, 0, 0, 0, 'Disable She Deep Breaths More (10) Achievement'),
+(4, 12559, 0, 0, 0, 'Disable Onyxia Lair (25) Achievement'),
+(4, 12567, 0, 0, 0, 'Disable More Dots! (25) Achievement'),
+(4, 12568, 0, 0, 0, 'Disable Many Whelps, Handle It! (25) Achievement'),
+(4, 12569, 0, 0, 0, 'Disable She Deep Breaths More (25) Achievement'),
+(4, 13276, 0, 0, 0, 'Disable Onyxia Death Stat (10)'),
+(4, 13345, 0, 0, 0, 'Disable Onyxia Kill Stat (25)');
 
 DELETE FROM `dungeon_access_requirements` WHERE `dungeon_access_id` = 15;
 INSERT INTO `dungeon_access_requirements` (`dungeon_access_id`, `requirement_type`, `requirement_id`, `requirement_note`, `faction`, `priority`, `leader_only`, `comment`) VALUES
